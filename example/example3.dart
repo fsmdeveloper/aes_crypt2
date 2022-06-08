@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'dart:typed_data';
 
-import 'package:aes_crypt2/aes_crypt.dart';
+import 'package:aes_crypt2/aes_crypt2.dart';
 
 // Asynchronous binary data encryption/decryption example
 

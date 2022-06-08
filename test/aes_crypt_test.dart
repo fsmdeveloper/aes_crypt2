@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:math';
 import 'dart:typed_data';
 
-import 'package:aes_crypt2/aes_crypt.dart';
+import 'package:aes_crypt2/aes_crypt2.dart';
 import 'package:test/test.dart';
 
 void main() {

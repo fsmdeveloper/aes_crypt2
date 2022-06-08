@@ -1,4 +1,4 @@
-import 'package:aes_crypt2/aes_crypt.dart';
+import 'package:aes_crypt2/aes_crypt2.dart';
 
 // Synchronous string encryption/decryption example
 
