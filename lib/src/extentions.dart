@@ -1,4 +1,4 @@
-part of aes_crypt;
+part of aes_crypt2;
 
 extension _Uint8ListExtension on Uint8List {
   bool get isNullOrEmpty => this == null || this.isEmpty;
@@ -34,12 +34,15 @@ extension _Uint8ListExtension on Uint8List {
       i += 2;
     }
     while (i < this.length) {
-      int firstWord = (endian == Endian.big)?
-        (this[i] << 8) + this[i + 1] : (this[i + 1] << 8) + this[i];
+      int firstWord = (endian == Endian.big)
+          ? (this[i] << 8) + this[i + 1]
+          : (this[i + 1] << 8) + this[i];
       if (0xD800 <= firstWord && firstWord <= 0xDBFF) {
-        int secondWord = (endian == Endian.big)?
-          (this[i + 2] << 8) + this[i + 3] : (this[i + 3] << 8) + this[i + 2];
-        buffer.writeCharCode(((firstWord - 0xD800) << 10) + (secondWord - 0xDC00) + 0x10000);
+        int secondWord = (endian == Endian.big)
+            ? (this[i + 2] << 8) + this[i + 3]
+            : (this[i + 3] << 8) + this[i + 2];
+        buffer.writeCharCode(
+            ((firstWord - 0xD800) << 10) + (secondWord - 0xDC00) + 0x10000);
         i += 4;
       } else {
         buffer.writeCharCode(firstWord);

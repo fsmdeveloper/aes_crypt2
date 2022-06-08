@@ -1,4 +1,4 @@
-part of aes_crypt;
+part of aes_crypt2;
 
 /// Enum that specifies the type of [AesCryptException] exception.
 enum AesCryptExceptionType {

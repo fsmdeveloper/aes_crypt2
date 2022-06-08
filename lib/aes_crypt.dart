@@ -5,7 +5,7 @@
 /// Flutter applications. All algorithms are implemented in pure Dart and work
 /// in all platforms. The library is fully compatible with any software using
 /// the [AES Crypt](https://www.aescrypt.com/) standard file format.
-library aes_crypt;
+library aes_crypt2;
 
 import 'dart:io';
 import 'dart:math';
